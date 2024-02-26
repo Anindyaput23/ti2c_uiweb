@@ -3,59 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Saya</title>
+    <title>Biodata Diri</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            color: #333;
         }
 
         header {
             background-color: #3498db;
             color: #fff;
             text-align: center;
-            padding: 1em 0;
+            padding: 2em 0;
         }
 
         section {
-            max-width: 600px;
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2 {
-            color: #333;
+            color: #3498db;
         }
 
         p {
-            color: #666;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Biodata Saya</h1>
+        <h1>Biodata Diri</h1>
     </header>
 
-    <section>
+    <section id="personal-info">
         <h2>Informasi Pribadi</h2>
-        <p>Nama: Anindya Putri Nariswari </p>
-        <p>Tanggal Lahir: 23 Desember 2004</p>
-        <p>Jenis Kelamin: Perempuan</p>
-        <p>Alamat: Jl. Trijaya 6 no 121 Kota Madiun</p>
-
-        <h2>Pendidikan</h2>
-        <p>SMAN 6 Madiun - Jurusan Ilmu Pengetahuan Alam, Tahun Lulus 2023</p>
-        <p>Politeknik Negeri Madiun - Jurusan Teknologi Informasi</p>
-
+        <p><strong>Nama:</strong> Anindya Putri Nariswari</p>
+        <p><strong>Tanggal Lahir:</strong> 23 Desember 2004</p>
+        <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+        <p><strong>Alamat:</strong> Jl. Trijaya 6 No 121, Kota Madiun</p>
     </section>
+
+    <section id="education">
+        <h2>Pendidikan</h2>
+        <p><strong>SMA:</strong> SMAN 6 Madiun, Tahun Lulus 2023</p>
+        <p><strong>Universitas:</strong> Politeknik Negeri Madiun, Jurusan Teknologi Informasi</p>
+    </section>
+
+    <section id="social media">
+        <h2>Media Sosial</h2>
+        <p><strong>Instagram:</strong> @anindyxptri</p>
+        <p><strong>WhatsApp:</strong>085731531475</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anindya Putri. Hak Cipta Dilindungi.</p>
+    </footer>
 
 </body>
 </html>
