@@ -1,134 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Utama</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f8f9fa; /* Warna latar belakang */
-            color: #f2f2f2; /* Warna teks utama */
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: rgb(67, 166, 255);
+      background: linear-gradient(18deg, rgba(67, 166, 255, 1) 0%, rgba(87, 24, 188, 1) 35%, rgba(254, 255, 255, 0.2441570378151261) 100%);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            background-color: #007bff; /* Warna latar header */
-            color: #fff; /* Warna teks header */
-            text-align: center;
-            padding: 1em 0;
-        }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation: fadeInContainer 1s ease-in-out forwards;
+    }
 
-        nav {
-            background-color: #343a40; /* Warna latar navigasi */
-            padding: 1em;
-            text-align: center;
-        }
+    @keyframes fadeInContainer {
+      to {
+        opacity: 1;
+      }
+    }
 
-        nav a {
-            color: #fff; /* Warna teks navigasi */
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
+    #Welcome {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        nav a:hover {
-            color: #007bff; /* Warna teks navigasi saat hover */
-        }
+    #Welcome h1 {
+      color: #333;
+      font-size: 36px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: slideIn 2s ease-in-out infinite;
+    }
 
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff; /* Warna latar konten */
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
+    @keyframes slideIn {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
 
-        .profile-picture {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
+      50% {
+        transform: translateX(10px);
+      }
+    }
 
-        h2 {
-            color: #007bff; /* Warna judul */
-        }
+    #Biodata {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(31, 207, 102, 0.1);
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeInElement 1s forwards;
+    }
 
-        p {
-            color: #495057; /* Warna teks konten */
-        }
+    @keyframes fadeInElement {
+      to {
+        opacity: 1;
+      }
+    }
 
-        .social-media {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
+    h2 {
+      color: #851196;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
 
-        .social-media li {
-            margin: 0 15px;
-        }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInElement 1s forwards;
+    }
 
-        .social-media a {
-            color: #007bff; /* Warna tautan sosial media */
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
-        }
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
 
-        .social-media a:hover {
-            color: #0056b3; /* Warna tautan sosial media saat hover */
-        }
+    .details {
+      flex-grow: 1;
+    }
 
-        footer {
-            background: rgb(2,0,36);
-            background: rgb(34,193,195);
-background: linear-gradient(327deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-            color: #fff; /* Warna teks footer */
-            text-align: center;
-            padding: 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    h3 {
+      margin: 0;
+      font-size: 24px;
+      color: #080808; /* Purple color */
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Add this style for the social media section */
+    #SocialMedia {
+      margin-top: 20px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeInElement 1s forwards;
+    }
+
+    #SocialMedia a {
+      display: inline-block;
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeInElement 1s forwards;
+    }
+  </style>
+  <title>Biodata</title>
 </head>
+
 <body>
 
-    <header>
-        <h1>Halaman Utama</h1>
-    </header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="profile.html">Profile</a>
-    </nav>
-
-    <section id="biodata">
-        <img src="profile.jpg" alt="Profil" class="profile-picture">
-        <h2>Data Pribadi</h2>
-        <p><strong>Nama:</strong> Anindya Putri Nariswari</p>
-        <p><strong>Tanggal Lahir:</strong> 23 Desember 2004</p>
-        <p><strong>Jenis Kelamin:</strong> Perempuan</p>
-        <p><strong>Alamat:</strong> Jl. Trijaya 6 No 121, Kota Madiun</p>
+  <div class="container">
+    <section id="Welcome">
+      <h1>Welcome To My Personal Biodata Page!</h1>
     </section>
 
-    <section id="sosial-media">
-        <h2>Media Sosial</h2>
-        <ul class="social-media">
-            <li><a href="https://www.instagram.com/anindyxptri" target="_blank">Instagram</a></li>
-        </ul>
+    <section id="Biodata">
+      <h2>Biodata</h2>
+      <div class="profile">
+        <img src="profileImage.jpg" alt="Profile Image">
+        <div class="details">
+          <h3>Anindya Putri Nariswari</h3>
+          <p>233307065</p>
+          <p>Teknologi Informasi </p>
+        </div>
+      </div>
+      <p>
+        "Hello and welcome to Anindya Putri Nariswari's personal biodata page! You can call me Anin. I am currently pursuing my 
+        studies in Information Technology at Politeknik Negeri Madiun. I was born on 23 December 2004 in Madiun . Throughout my 
+        educational journey, I attended SMAN 6 Madiun and graduated in 2023. 
+        Explore more about my educational background, achievements, and projects. Feel free to connect with me on social media. 
+        Thank you for visiting!"
+      </p>
+
+      <!-- Social Media Section -->
+      <div id="SocialMedia">
+        <a href="https://instagram/anindyxptri?igsh=MXRhcXRkaXh1azF5Mw==" target="_blank">@anindyxptri</a>
+        <!-- Add more social media links as needed -->
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Anindya Putri. Hak Cipta Dilindungi.</p>
-    </footer>
+    <div class="copyright">
+      <p>&copy; 2024 Anindya Putri Nariswari. All rights reserved.</p>
+    </div>
+  </div>
 
 </body>
+
 </html>
