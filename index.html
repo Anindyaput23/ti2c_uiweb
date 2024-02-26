@@ -3,44 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Diri</title>
+    <title>Halaman Utama</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            color: #333;
+            background-color: #f8f9fa; /* Warna latar belakang */
+            color: #f2f2f2; /* Warna teks utama */
+            line-height: 1.6;
         }
 
         header {
-            background-color: #3498db;
-            color: #fff;
+            background-color: #007bff; /* Warna latar header */
+            color: #fff; /* Warna teks header */
             text-align: center;
-            padding: 2em 0;
+            padding: 1em 0;
+        }
+
+        nav {
+            background-color: #343a40; /* Warna latar navigasi */
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff; /* Warna teks navigasi */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #007bff; /* Warna teks navigasi saat hover */
         }
 
         section {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #fff; /* Warna latar konten */
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2 {
-            color: #3498db;
+        .profile-picture {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #007bff; /* Warna judul */
         }
 
         p {
-            line-height: 1.6;
+            color: #495057; /* Warna teks konten */
+        }
+
+        .social-media {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-media li {
+            margin: 0 15px;
+        }
+
+        .social-media a {
+            color: #007bff; /* Warna tautan sosial media */
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-media a:hover {
+            color: #0056b3; /* Warna tautan sosial media saat hover */
         }
 
         footer {
-            background-color: #3498db;
-            color: #fff;
+            background-color: #007bff; /* Warna latar footer */
+            color: #fff; /* Warna teks footer */
             text-align: center;
             padding: 1em 0;
             position: fixed;
@@ -52,27 +100,28 @@
 <body>
 
     <header>
-        <h1>Biodata Diri</h1>
+        <h1>Halaman Utama</h1>
     </header>
 
-    <section id="personal-info">
-        <h2>Informasi Pribadi</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+    <section id="biodata">
+        <img src="profile.jpg" alt="Profil" class="profile-picture">
+        <h2>Data Pribadi</h2>
         <p><strong>Nama:</strong> Anindya Putri Nariswari</p>
         <p><strong>Tanggal Lahir:</strong> 23 Desember 2004</p>
         <p><strong>Jenis Kelamin:</strong> Perempuan</p>
         <p><strong>Alamat:</strong> Jl. Trijaya 6 No 121, Kota Madiun</p>
     </section>
 
-    <section id="education">
-        <h2>Pendidikan</h2>
-        <p><strong>SMA:</strong> SMAN 6 Madiun, Tahun Lulus 2023</p>
-        <p><strong>Universitas:</strong> Politeknik Negeri Madiun, Jurusan Teknologi Informasi</p>
-    </section>
-
-    <section id="social media">
+    <section id="sosial-media">
         <h2>Media Sosial</h2>
-        <p><strong>Instagram:</strong> @anindyxptri</p>
-        <p><strong>WhatsApp:</strong>085731531475</p>
+        <ul class="social-media">
+            <li><a href="https://www.instagram.com/anindyxptri" target="_blank">Instagram</a></li>
+        </ul>
     </section>
 
     <footer>
