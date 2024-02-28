@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Belajar Variabel dalam Javascript</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+           background: rgb(240,241,247);
+background: radial-gradient(circle, rgba(240,241,247,1) 0%, rgba(12,82,41,1) 100%);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333; /* Warna teks */
+        }
+
+        .output-container {
+            background-color: #fff; /* Warna latar belakang kontainer output */
+            border-radius: 8px;
+            padding: 10px; /* Mengurangi padding untuk memperkecil kotak */
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .output-container p {
+            margin: 5px 0; /* Memberikan sedikit margin antar elemen */
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Belajar Javascript</h1>
+
+    <div class="output-container">
+        <p>Nama: <span id="nama"></span></p>
+        <p>NIM: <span id="nim"></span></p>
+        <p>Hobby: <span id="hobby"></span></p>
+    </div>
+
+    <script>
+        // Membuat variabel
+        var name = "Anindya Putri Nariswari";
+        var nim = "233307065";
+        var hobby = "Olahraga";
+
+        // Menampilkan variabel ke dalam HTML
+        document.getElementById("nama").innerHTML = name;
+        document.getElementById("nim").innerHTML = nim;
+        document.getElementById("hobby").innerHTML = hobby;
+
+        // Menampilkan variabel ke jendela dialog (alert)
+        alert("Selamat datang di Belajar Javascript\nAnindya Putri N");
+    </script>
+</body>
+</html>
