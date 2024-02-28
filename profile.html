@@ -1,173 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: 'Poppins', 'Magic Retro';
-      background: rgb(67, 166, 255);
-      background: linear-gradient(18deg, rgba(67, 166, 255, 1) 0%, rgba(87, 24, 188, 1) 35%, rgba(254, 255, 255, 0.2441570378151261) 100%);
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+    <title>Belajar Variabel dalam Javascript</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #bfc6ce; /* Warna latar belakang */
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      animation: fadeInContainer 1s ease-in-out forwards;
-    }
+        h1 {
+            color: #333; /* Warna teks */
+        }
 
-    @keyframes fadeInContainer {
-      to {
-        opacity: 1;
-      }
-    }
+        .output-container {
+            background-color: #fff; /* Warna latar belakang kontainer output */
+            border-radius: 8px;
+            padding: 10px; /* Mengurangi padding untuk memperkecil kotak */
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
 
-    #Welcome {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    #Welcome h1 {
-      color: #333;
-      font-size: 36px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      animation: slideIn 2s ease-in-out infinite;
-    }
-
-    @keyframes slideIn {
-      0%,
-      100% {
-        transform: translateX(0);
-      }
-
-      50% {
-        transform: translateX(10px);
-      }
-    }
-
-    #Biodata {
-      background-color: #fff;
-      padding: 20px;
-      margin-top: 20px;
-      box-shadow: 0 0 10px rgba(31, 207, 102, 0.1);
-      border-radius: 10px;
-      opacity: 0;
-      animation: fadeInElement 1s forwards;
-    }
-
-    @keyframes fadeInElement {
-      to {
-        opacity: 1;
-      }
-    }
-
-    h2 {
-      color: #851196;
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
-    }
-
-    .profile {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      opacity: 0;
-      animation: fadeInElement 1s forwards;
-    }
-
-    .profile img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-right: 20px;
-    }
-
-    .details {
-      flex-grow: 1;
-    }
-
-    h3 {
-      margin: 0;
-      font-size: 24px;
-      color: #080808; /* Purple color */
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    /* Add this style for the social media section */
-    #SocialMedia {
-      margin-top: 20px;
-      text-align: center;
-      opacity: 0;
-      animation: fadeInElement 1s forwards;
-    }
-
-    #SocialMedia a {
-      display: inline-block;
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-      font-size: 20px;
-    }
-
-    .copyright {
-      text-align: center;
-      margin-top: 20px;
-      opacity: 0;
-      animation: fadeInElement 1s forwards;
-    }
-  </style>
-  <title>Biodata</title>
+        .output-container p {
+            margin: 5px 0; /* Memberikan sedikit margin antar elemen */
+        }
+    </style>
 </head>
-
 <body>
+    <h1>Selamat Datang di Belajar Javascript</h1>
 
-  <div class="container">
-    <section id="Welcome">
-      <h1>Welcome To My Personal Biodata Page!</h1>
-    </section>
-
-    <section id="Biodata">
-      <h2>Biodata</h2>
-      <div class="profile">
-        <img src="foto.jpeg" alt="Profile Image">
-        <div class="details">
-          <h3>Anindya Putri Nariswari</h3>
-          <p>233307065 / 2C</p>
-          <p>Teknologi Informasi </p>
-        </div>
-      </div>
-      <p>
-        Hello, Welcome to Anindya Putri Nariswari's personal biodata page! You can call me Anin. I am currently pursuing my studies 
-        in Information Technology at Politeknik Negeri Madiun. I was born on 23 December 2004 in Madiun . Throughout my educational 
-        journey, I attended SMAN 6 Madiun and graduated in 2023. 
-        Explore more about my educational background, achievements, and projects. Feel free to connect with me on social media. 
-        Thank you for visiting!
-      </p>
-
-      <!-- Social Media Section -->
-      <div id="SocialMedia">
-        <a href="https://instagram/anindyxptri?igsh=MXRhcXRkaXh1azF5Mw==" target="_blank">@anindyxptri</a>
-        <!-- Add more social media links as needed -->
-      </div>
-    </section>
-
-    <div class="copyright">
-      <p>&copy; 2024 Anindya Putri Nariswari. All rights reserved.</p>
+    <div class="output-container">
+        <p>Nama: <span id="nama"></span></p>
+        <p>NIM: <span id="nim"></span></p>
+        <p>Hobby: <span id="hobby"></span></p>
     </div>
-  </div>
 
+    <script>
+        // Membuat variabel
+        var name = "Anindya Putri Nariswari";
+        var nim = "233307065";
+        var hobby = "Olahraga";
+
+        // Menampilkan variabel ke dalam HTML
+        document.getElementById("nama").innerHTML = name;
+        document.getElementById("nim").innerHTML = nim;
+        document.getElementById("hobby").innerHTML = hobby;
+
+        // Menampilkan variabel ke jendela dialog (alert)
+        alert("Selamat datang di Belajar Javascript\nAnindya Putri N");
+    </script>
 </body>
-
 </html>
