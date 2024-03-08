@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(111,117,13,1) 100%);
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #fff;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        #studentForm {
+            margin: 20px auto; /* Menurunkan form */
+            width: 400px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #studentForm label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        #studentForm input[type="text"],
+        #studentForm input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #c9b8b8;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #studentForm button {
+            background-color: #4CAF50;
+            color: rgb(210, 207, 207);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px; /* Menurunkan tombol sedikit */
+        }
+
+        #studentTable {
+            margin: 30px auto;
+            width: 400px;
+            border-collapse: collapse;
+        }
+
+        #studentTable thead th,
+        #studentTable tbody td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        #studentTable thead th:first-child,
+        #studentTable thead th:last-child {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Mahasiswa</h1>
+    <form id="studentForm">
+        <label for="nim">NIM:</label><br>
+        <input type="number" id="nim" name="nim"><br>
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <button type="button" onclick="saveStudent()">Simpan</button>
+    </form>
+
+    <table id="studentTable" style="width:400;">
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody"></tbody>
+    </table>
+
+    <script>
+        var arrStudent = [];
+
+        function Student(nim, name) {
+            this.nim = nim;
+            this.name = name;
+        }
+
+        function saveStudent() {
+            var studentForm = document.getElementById("studentForm");
+            var nim = document.getElementById("nim").value;
+            var name = document.getElementById("name").value;
+
+            var student = new Student(nim, name);
+            arrStudent.push(student);
+
+            studentForm.reset();
+            showStudent(student);
+        }
+
+        function showStudent(student) {
+            var studentTableBody = document.getElementById("studentTableBody");
+            var tr = document.createElement("tr");
+
+            var tdNim = document.createElement("td");
+            tdNim.textContent = student.nim;
+            tr.appendChild(tdNim);
+
+            var tdNama = document.createElement("td");
+            tdNama.textContent = student.name;
+            tr.appendChild(tdNama);
+
+            studentTableBody.appendChild(tr);
+        }
+    </script>
+</body>
+</html>
